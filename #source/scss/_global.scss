@@ -1,0 +1,61 @@
+$sandy-brown: #FFA047;
+$rich-black: #000B14;
+
+
+
+body * {
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background: #EEEEEE;
+}
+
+@media(min-width:1400px) {
+    .container {
+        max-width: 1344px;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+.orangebg {
+    background: $sandy-brown;
+
+    &:hover {
+        color: #fff;
+        background: #ff932e;
+    }
+}
+
+.whitebg {
+    background: #fff;
+
+    &:hover {
+        color: $rich-black;
+    }
+}
+
+.btn-clippath {
+    color: white;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: $rich-black;
+    font-weight: 600;
+    padding: 5px 17px;
+    position: relative;
+    clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px));
+    transition: 0.3s;
+}
+
+h2 {
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 140%;
+
+}
