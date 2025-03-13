@@ -8,7 +8,8 @@ body * {
 }
 
 body {
-    background: #EEEEEE;
+    // background: #EEEEEE;
+    background: #000B14;
 }
 
 @media(min-width:1400px) {
@@ -58,4 +59,10 @@ h2 {
     font-weight: 700;
     line-height: 140%;
 
+}
+
+button {
+    padding: 0;
+    border: none;
+    background: transparent;
 }
