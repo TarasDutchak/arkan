@@ -22,6 +22,20 @@ a {
     text-decoration: none;
 }
 
+input {
+    outline: none;
+}
+
+button {
+    padding: 0;
+    border: none;
+    background: transparent;
+}
+
+
+
+
+
 .orangebg {
     background: $sandy-brown;
 
@@ -61,8 +75,8 @@ h2 {
 
 }
 
-button {
-    padding: 0;
-    border: none;
-    background: transparent;
+@media(max-width:1599.8px) {
+    h2 {
+        font-size: 56px;
+    }
 }

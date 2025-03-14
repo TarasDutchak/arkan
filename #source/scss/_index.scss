@@ -1378,7 +1378,6 @@
 
 .faqrow {
     border-top: 1px solid rgba(#353B44, 0.2);
-    border-bottom: 1px solid rgba(#353B44, 0.2);
     position: relative;
 
     &::after {
@@ -1474,6 +1473,7 @@
         margin: 0;
         font-size: 16px;
         color: #353B44;
+        max-width: 818px;
     }
 }
 
@@ -1584,7 +1584,7 @@
         clip-path: polygon(48px 0, calc(100% - 48px) 0, 100% 48px, 100% calc(100% - 48px), calc(100% - 48px) 100%, 48px 100%, 0 calc(100% - 48px), 0 48px);
         background: rgba(#F5F5F5, 0.09);
         height: 320px;
-        
+
 
         &.v3 {
             height: 450px;
@@ -1666,7 +1666,7 @@
                 top: -43px;
             }
         }
-        
+
     }
 }
 
@@ -1730,6 +1730,7 @@
     .col-lg-4 {
         .newitem {
             position: relative;
+
             &::after {
                 content: '';
                 width: 31px;
@@ -1742,9 +1743,194 @@
     }
 }
 
+.videomodal {
+
+    .modal-dialog {
+        max-width: 1000px;
+    }
+
+    .modal-content {
+        border: none;
+        border-radius: 0;
+        padding: 10px;
+        background: #FF820E;
+    }
+
+    iframe {
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 16 / 9;
+    }
+
+    .btn-closem {
+        position: absolute;
+        right: -40px;
+        top: 0;
+        opacity: 1;
+        color: #FF820E;
+        box-shadow: none;
+        outline: none;
+        transition: 0.3s;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+}
+
+
+
+@media(max-width:1599.8px) {
+
+    .mainscreen__content .mainscreen__logo {
+        max-width: 700px;
+        margin-bottom: 30px;
+    }
+
+    .mainscreen__content p {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+
+    .ourfacilities__itam .descriptionwrap .title {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
+    .swiper-slide-active .descr {
+        height: 64px;
+        margin-bottom: 5px;
+    }
+
+    .ourfacilities__itam .imgwrap {
+        height: 240px;
+    }
+
+    .ourfacilities__sl .swiper-button-next {
+        right: 5%;
+    }
+
+    .ourfacilities__sl .swiper-button-prev {
+        left: 5%;
+    }
+
+    .features__content .clippathbox .title {
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+
+    .features__content .clippathbox a {
+        margin-top: 20px;
+    }
+
+    .areasrow .areasrow__item p {
+        font-size: 42px;
+
+        i {
+            font-size: 15px;
+        }
+    }
+
+    .ourfacilities h3 span {
+        font-size: 70px;
+    }
+
+    .ourfacilities__tabbtns {
+        margin-bottom: 40px;
+    }
+
+    .hotprop,
+    .hotprormainsl .imgwrap {
+        height: 700px;
+    }
+
+    .subslwrapper {
+        height: 600px;
+        width: 460px;
+    }
+
+    .hotprorsubslidebox {
+        padding: 60px 40px 20px 40px;
+    }
+
+    .hotprorsubslidebox .wraqp .subtitle {
+        font-size: 16px;
+    }
+
+    .hotprorsubslidebox .wraqp .title {
+        font-size: 26px;
+    }
+
+    .mainfaq h3 {
+        margin-bottom: 50px;
+    }
+
+    .faqrow__header {
+        min-height: 70px;
+
+        p {
+            font-size: 21px;
+        }
+    }
+
+    .faqrow .openstatus {
+        z-index: 2;
+        width: 50px;
+        height: 50px;
+
+        i {
+            height: 2px;
+            width: 16px;
+        }
+    }
+
+    .newitem .imgwrap {
+        height: 180px;
+    }
+
+    .newitem .descrwrap {
+        padding: 20px 20px 30px 20px;
+    }
+
+    .newitem .descrwrap .date {
+        font-size: 14px;
+        margin-bottom: 2px;
+    }
+
+    .newitem .descrwrap h6 {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
+    .newitem .descrwrap p {
+        font-size: 15px;
+        line-height: 140%;
+    }
 
 
 
 
-// clip-path: polygon(48px 0, calc(100% - 48px) 0, 100% 48px, 100% calc(100% - 48px),
-//                 calc(100% - 48px) 100%, 48px 100%, 0 calc(100% - 48px), 0 48px);
+
+
+
+
+
+
+
+
+
+    .ourfacilities,
+    .mainfaq {
+        padding: 100px 0;
+    }
+
+
+    .infoslide__content .infoslide__descrwrap p {
+        font-size: 18px;
+    }
+
+    .mainfaq h3 {
+        font-size: 50px;
+    }
+}
