@@ -10,6 +10,10 @@ body * {
 body {
     // background: #EEEEEE;
     background: #000B14;
+
+    &.hidden {
+        overflow: hidden;
+    }
 }
 
 @media(min-width:1400px) {
@@ -75,8 +79,36 @@ h2 {
 
 }
 
+.showmob {
+    display: none !important;
+}
+
 @media(max-width:1599.8px) {
     h2 {
         font-size: 56px;
+    }
+}
+
+@media(max-width:1399.8px) {
+    h2 {
+        font-size: 48px;
+    }
+}
+
+@media(max-width:1199.8px) {
+    .showmob {
+        display: block !important;
+    }
+}
+
+@media(max-width:767.8px) {
+    h2 {
+        font-size: 36px;
+    }
+}
+
+@media(max-width:575.8px) {
+    h2 {
+        font-size: 32px;
     }
 }

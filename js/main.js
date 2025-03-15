@@ -11,9 +11,25 @@ $(document).ready(function () {
     // home page slider
     var swiper2 = new Swiper(".infoslider", {
         slidesPerView: "auto",
-        spaceBetween: 21,
+        // initialSlide: 1,
         loop: true,
-        slidesOffsetBefore: -200
+        // slidesOffsetBefore: 0,
+        breakpoints: {
+            320: {
+                spaceBetween: 10,
+                slidesOffsetBefore: 0,
+                initialSlide: 1,
+            },
+            576: {
+                spaceBetween: 10,
+                slidesOffsetBefore: -200,
+                initialSlide: 0,
+            },
+            1200: {
+                spaceBetween: 21,
+                slidesOffsetBefore: -200,
+            },
+        },
     });
 
     // parallax
@@ -23,7 +39,7 @@ $(document).ready(function () {
     // partners slider
 
     var swiper = new Swiper(".partners-slider", {
-        slidesPerView: 5,
+        slidesPerView: 2,
         spaceBetween: 0,
         loop: true,
         pagination: {
@@ -33,6 +49,20 @@ $(document).ready(function () {
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+            575: {
+                slidesPerView: 2,
+            },
+            768: {
+                slidesPerView: 3,
+            },
+            992: {
+                slidesPerView: 4,
+            },
+            1400: {
+                slidesPerView: 5,
+            },
         },
     });
 
@@ -59,8 +89,8 @@ $(document).ready(function () {
     // tabs sliders
 
     var swiper = new Swiper(".ourfacilities__sl", {
-        slidesPerView: 4,
-        spaceBetween: 30,
+        slidesPerView: 1.2,
+        spaceBetween: 10,
         centeredSlides: true,
         loop: true,
         speed: 1200,
@@ -72,6 +102,24 @@ $(document).ready(function () {
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+            575: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            992: {
+                slidesPerView: 3.3,
+                spaceBetween: 30,
+            },
+            1400: {
+                slidesPerView: 4,
+                spaceBetween: 30,
+            },
         },
     });
 
@@ -95,25 +143,56 @@ $(document).ready(function () {
         slidesPerView: 1,
         loop: true,
         speed: 700,
-        navigation: {
-            nextEl: ".swiper-button-next.v3",
-            prevEl: ".swiper-button-prev.v3",
-        },
+        watchSlidesProgress: true,
+        // navigation: {
+        //     nextEl: ".swiper-button-next.v3",
+        //     prevEl: ".swiper-button-prev.v3",
+        // },
         thumbs: {
             swiper: subSwiper,
         },
-        pagination: {
-            el: ".swiper-pagination.v3",
-            clickable: true,
-        },
+        // pagination: {
+        //     el: ".swiper-pagination.v3",
+        //     clickable: true,
+        // },
     });
 
     // faq
-    $('.faqrow__header').click(function(){
+    $('.faqrow__header').click(function () {
         $(this).parent().toggleClass('active');
 
         $(this).next('.faqrow__body').slideToggle();
     });
 
+    if ($('.burger2').length) {
+        (function () {
+            var burger2;
+            burger2 = document.querySelector(".burger2");
+            burger2.addEventListener("click", function () {
+                return burger2.classList.toggle("on");
+            });
+
+        }).call(this);
+    }
+
+    $('.burger').click(function () {
+        $('.adaptmenu').toggleClass('show');
+        $('.header__bottsect').toggleClass('open');
+    })
+
+    $('.burger').click(function () {
+        $('body').toggleClass('hidden');
+        $('.header__left').toggleClass('show');
+        window.scrollTo(0, 0);
+    })
+
+    let modal = document.getElementById("videomodal"); // Замініть на ID вашого модального вікна
+    let iframe = modal.querySelector("iframe");
+
+    modal.addEventListener("hidden.bs.modal", function () {
+        let src = iframe.src;
+        iframe.src = "";  // Очистка src, щоб відео зупинилося
+        iframe.src = src; // Відновлення src
+    });
 
 });

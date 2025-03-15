@@ -17,14 +17,20 @@
 
     <header class="header">
         <div class="container">
-            <div class="d-flex align-items-center">
+            <div class="d-flex align-items-center ">
                 <div class="header__left">
-                    <ul>
-                        <li class="active"><a href="#">Головна</a></li>
-                        <li><a href="#">Про нас</a></li>
-                        <li><a href="#">Наші обʼєкти</a></li>
-                        <li><a href="#">Керуюча компанія</a></li>
-                    </ul>
+                    <div class="wrapperhdr">
+                        <ul>
+                            <li class="active"><a href="#">Головна</a></li>
+                            <li><a href="#">Про нас</a></li>
+                            <li><a href="#">Наші обʼєкти</a></li>
+                            <li><a href="#">Керуюча компанія</a></li>
+                        </ul>
+                        <ul class="showmob">
+                            <li><a href="#">Новини</a></li>
+                            <li><a href="#">Контакти</a></li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="header__logo">
                     <a href="#">
@@ -40,7 +46,13 @@
                         <div class="header__language">
                             <a href="#" class="chooselang">UA</a>
                         </div>
-                        <a href="tel:+380687070300" class="btn-clippath orangebg">+38 068 707 03 00</a>
+                        <a href="tel:+380687070300" class="btn-clippath orangebg">
+                            <img src="img/general/mob-tel.png" alt="tel">
+                            <span>+38 068 707 03 00</span>
+                        </a>
+                    </div>
+                    <div class="header__burger">
+                        <button class="burger burger2"><span></span></button>
                     </div>
                 </div>
             </div>
@@ -233,7 +245,7 @@
             <div class="arcangrp">
                 <div class="container">
                     <div class="row justify-content-end">
-                        <div class="col-xl-6">
+                        <div class="col-xl-6 col-lg-6">
                             <div class="arcangrpwrp">
                                 <p class="title">Arkan Group</p>
                                 <p>
@@ -382,9 +394,9 @@
             <div class="ourfacilities__tabbtns">
                 <div class="container">
                     <ul class="btnswrap">
-                        <li><button>Усі обʼєкти</button></li>
-                        <li><button class="active">Офісні приміщення</button></li>
-                        <li><button>Склади</button></li>
+                        <li><button><span>Усі обʼєкти</span></button></li>
+                        <li><button class="active"><span>Офісні приміщення</span></button></li>
+                        <li><button><span>Склади</span></button></li>
                     </ul>
                 </div>
             </div>
@@ -1268,7 +1280,7 @@
         <div class="container">
             <div class="footer__top">
                 <div class="row">
-                    <div class="col-xl-6">
+                    <div class="col-xl-6 col-lg-4">
                         <div class="footer__leftsect">
                             <a href="#" class="footer__logo">
                                 <img src="img/general/logo-footer.svg" alt="logo">
@@ -1289,7 +1301,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-xl-3">
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
                         <div class="footer__nav">
                             <p class="footer__title">Navigation</p>
                             <ul>
@@ -1302,9 +1314,9 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-xl-3">
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
                         <div class="footer__contacts">
-                            <p class="footer__title">Navigation</p>
+                            <p class="footer__title">Contact Us</p>
                             <div class="footer__local">
                                 <img src="img/general/location.svg" alt="location">
                                 <p class="subtitle">Address</p>
