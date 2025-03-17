@@ -81,6 +81,27 @@ header.header {
     &.scroll {
         height: 80px;
     }
+
+    &.header__white {
+        ul li {
+            a {
+                color: #000B14;
+            }
+
+            &.active {
+                a {
+                    color: #FFA047;
+                }
+            }
+        }
+
+        .header__language .chooselang {
+            border: 1px solid #000B14;
+            color: #000B14;
+        }
+    }
+
+    
 }
 
 .header__left {

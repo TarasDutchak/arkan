@@ -1,0 +1,1923 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Об'єкти</title>
+    <!-- <link rel="icon" type="image/x-icon" href="favicon.png"> -->
+    <link rel="stylesheet" href="css/lib/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="header header__white">
+        <div class="container">
+            <div class="d-flex align-items-center ">
+                <div class="header__left">
+                    <div class="wrapperhdr">
+                        <ul>
+                            <li><a href="#">Головна</a></li>
+                            <li><a href="#">Про нас</a></li>
+                            <li class="active"><a href="#">Наші обʼєкти</a></li>
+                            <li><a href="#">Керуюча компанія</a></li>
+                        </ul>
+                        <ul class="showmob">
+                            <li><a href="#">Новини</a></li>
+                            <li><a href="#">Контакти</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="header__logo">
+                    <a href="#">
+                        <img src="img/general/logo.svg" alt="logo">
+                    </a>
+                </div>
+                <div class="header__right">
+                    <ul>
+                        <li><a href="#">Новини</a></li>
+                        <li><a href="#">Контакти</a></li>
+                    </ul>
+                    <div class="header__set">
+                        <div class="header__language">
+                            <a href="#" class="chooselang">UA</a>
+                        </div>
+                        <a href="tel:+380687070300" class="btn-clippath orangebg">
+                            <img src="img/general/mob-tel.png" alt="tel">
+                            <span>+38 068 707 03 00</span>
+                        </a>
+                    </div>
+                    <div class="header__burger">
+                        <button class="burger burger2"><span></span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bgheader"></div>
+    </header>
+
+    <main class="main">
+        <div class="objectmap">
+            <div id="map"></div>
+        </div>
+
+        <section class="outobj">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-3 col-lg-3">
+                        <div class="filterbtn">
+                            <img src="img/object/filter.png" alt="filter">
+                        </div>
+                        <div class="outobj__filter">
+                            <div class="filterbox">
+                                <p class="title">Тип обʼєкту</p>
+                                <div class="filterbox__checks">
+                                    <div class="filterbox__check">
+                                        <input type="checkbox" id="ch1">
+                                        <label for="ch1">Усі обʼєкти (25)</label>
+                                    </div>
+                                    <div class="filterbox__check">
+                                        <input type="checkbox" id="ch2">
+                                        <label for="ch2">Склад (10)</label>
+                                    </div>
+                                    <div class="filterbox__check">
+                                        <input type="checkbox" id="ch3">
+                                        <label for="ch3">Офісне приміщення (15)</label>
+                                    </div>
+                                    <div class="filterbox__check">
+                                        <input type="checkbox" id="ch4">
+                                        <label for="ch4">Офісне приміщення (15)</label>
+                                    </div>
+                                    <div class="filterbox__check">
+                                        <input type="checkbox" id="ch5">
+                                        <label for="ch5">Офісне приміщення (15)</label>
+                                    </div>
+
+                                </div>
+                                <a href="#" class="filtermore">
+                                    <span>Показати більше</span>
+                                    <span>Показати менше</span>
+                                </a>
+                            </div>
+                            <div class="filterbox">
+                                <p class="title">Послуги</p>
+                                <div class="filterbox__checks">
+                                    <div class="filterbox__check">
+                                        <input type="checkbox" id="ch6">
+                                        <label for="ch6">Усі послуги</label>
+                                    </div>
+                                    <div class="filterbox__check">
+                                        <input type="checkbox" id="ch7">
+                                        <label for="ch7">Продаж приміщень</label>
+                                    </div>
+                                    <div class="filterbox__check">
+                                        <input type="checkbox" id="ch8">
+                                        <label for="ch8">Оренда приміщень</label>
+                                    </div>
+                                    <div class="filterbox__check">
+                                        <input type="checkbox" id="ch9">
+                                        <label for="ch9">Оренда приміщень</label>
+                                    </div>
+                                    <div class="filterbox__check">
+                                        <input type="checkbox" id="ch10">
+                                        <label for="ch10">Оренда приміщень</label>
+                                    </div>
+
+                                </div>
+                                <a href="#" class="filtermore">
+                                    <span>Показати більше</span>
+                                    <span>Показати менше</span>
+                                </a>
+                            </div>
+                            <div class="filterbox">
+                                <p class="title">Послуги</p>
+                                <div class="filterbox__checks">
+                                    <div class="filterbox__check">
+                                        <input type="checkbox" id="ch11">
+                                        <label for="ch11">Місцезнаходження</label>
+                                    </div>
+                                    <div class="filterbox__check">
+                                        <input type="checkbox" id="ch12">
+                                        <label for="ch12">Пасічна</label>
+                                    </div>
+                                    <div class="filterbox__check">
+                                        <input type="checkbox" id="ch13">
+                                        <label for="ch13">Центр</label>
+                                    </div>
+                                    <div class="filterbox__check">
+                                        <input type="checkbox" id="ch14">
+                                        <label for="ch14">Княгинин</label>
+                                    </div>
+                                    <div class="filterbox__check">
+                                        <input type="checkbox" id="ch15">
+                                        <label for="ch15">Княгинин</label>
+                                    </div>
+
+                                </div>
+                                <a href="#" class="filtermore">
+                                    <span>Показати більше</span>
+                                    <span>Показати менше</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-9 col-lg-9">
+                        <div class="outobj__wrapper">
+                            <h1>
+                                <span>Наші об’єкти</span>
+                            </h1>
+                            <form action="#">
+                                <div class="objsearch">
+                                    <img class="objsearch__ic" src="img/general/search-icon.svg" alt="icon">
+                                    <input type="text" placeholder="Пошук">
+                                </div>
+                            </form>
+
+                            <div class="objectssection">
+                                <div class="object-item ">
+                                    <img class="object-logo" src="img/object/obj-logo1.svg" alt="logo">
+                                    <div class="object-item__left">
+                                        <h3>
+                                            Оупен спейс у ЖК River Парк
+                                        </h3>
+                                        <p class="object-item__hotprop">
+                                            🔥 Гаряча пропозиція
+                                        </p>
+                                        <ul>
+                                            <li>
+                                                <span class="object-item__icon">
+                                                    <img src="img/object/obj-ic1.svg" alt="icon">
+                                                </span>
+                                                <b>Загальна площа:</b> 550 м2
+                                            </li>
+                                            <li>
+                                                <span class="object-item__icon">
+                                                    <img src="img/object/obj-ic2.svg" alt="icon">
+                                                </span>
+                                                <b>Адреса:</b> вул. Галицька, 141Б,
+                                                м. Івано-Франківськ
+                                            </li>
+                                            <li>
+                                                <span class="object-item__icon">
+                                                    <img src="img/object/obj-ic3.svg" alt="icon">
+                                                </span>
+                                                <b>Поверх:</b> 1
+                                            </li>
+                                            <li>
+                                                <span class="object-item__icon">
+                                                    <img src="img/object/obj-ic4.svg" alt="icon">
+                                                </span>
+                                                <b>Висота приміщення:</b> 3,6 м
+                                            </li>
+                                            <li>
+                                                <span class="object-item__icon">
+                                                    <img src="img/object/obj-ic5.svg" alt="icon">
+                                                </span>
+                                                <b>Зовнішні стіни:</b> цегляні з
+                                                утепленням (пінопласт)
+                                            </li>
+                                            <li>
+                                                <span class="object-item__icon">
+                                                    <img src="img/object/obj-ic6.svg" alt="icon">
+                                                </span>
+                                                <b>Внутрішні стіни:</b> поштукатурені
+                                            </li>
+                                        </ul>
+                                        <a href="#" class="btn-clippath orangebg moreobjbtn">
+                                            <span>Більше</span>
+                                            <img src="img/general/arr-bottom.svg" alt="btnicon">
+                                        </a>
+                                    </div>
+                                    <div class="object-item__right">
+                                        <h3>
+                                            Оупен спейс у ЖК River Парк
+                                        </h3>
+                                        <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+                                            class="swiper objslider2">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide1.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide2.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide1.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide2.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide1.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide2.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide1.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide2.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-button-next v1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="43" height="44"
+                                                    viewBox="0 0 43 44" fill="none">
+                                                    <path
+                                                        d="M10.0005 21.9995L32.9995 21.9995M32.9995 21.9995L21.5 33.4991M32.9995 21.9995L21.5 10.5"
+                                                        stroke="white" stroke-width="3"></path>
+                                                </svg>
+                                            </div>
+                                            <div class="swiper-button-prev v1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="43" height="44"
+                                                    viewBox="0 0 43 44" fill="none">
+                                                    <path
+                                                        d="M32.9995 22.0005L10.0005 22.0005M10.0005 22.0005L21.5 10.5009M10.0005 22.0005L21.5 33.5"
+                                                        stroke="white" stroke-width="3"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div thumbsSlider="" class="swiper objslider1">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide1.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide2.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide1.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide2.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide1.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide2.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide1.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide2.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="objdescrsect">
+                                            <div class="wrp">
+                                                <ul>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic1.svg" alt="icon">
+                                                        </span>
+                                                        <b>Загальна площа:</b> 550 м2
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic7.svg" alt="icon">
+                                                        </span>
+                                                        <b>Підлогове покриття:</b> наливна підлога
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic2.svg" alt="icon">
+                                                        </span>
+                                                        <b>Адреса:</b> вул. Галицька, 141Б,
+                                                        м. Івано-Франківськ
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic8.svg" alt="icon">
+                                                        </span>
+                                                        <b>Вікна:</b> алюмінієві
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic3.svg" alt="icon">
+                                                        </span>
+                                                        <b>Поверх:</b> 1
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic9.svg" alt="icon">
+                                                        </span>
+                                                        <b>Вхідні двері в приміщення:</b> алюмінієві
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic4.svg" alt="icon">
+                                                        </span>
+                                                        <b>Висота приміщення:</b> 3,6 м
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic10.svg" alt="icon">
+                                                        </span>
+                                                        <b>Електропостачання:</b> трифазне, 20 кВт
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic5.svg" alt="icon">
+                                                        </span>
+                                                        <b>Зовнішні стіни:</b> цегляні з
+                                                        утепленням (пінопласт)
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic11.svg" alt="icon">
+                                                        </span>
+                                                        <b>Система водопостачання та каналізації: </b>
+                                                        заведені в приміщення
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic6.svg" alt="icon">
+                                                        </span>
+                                                        <b>Внутрішні стіни:</b> поштукатурені
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic12.svg" alt="icon">
+                                                        </span>
+                                                        <b>Система опалення розведена із
+                                                            встановленими радіаторами:</b> фанкойли
+                                                    </li>
+                                                </ul>
+                                                <h5>Вдале розташування</h5>
+                                                <p>
+                                                    Локація на центральній вулиці Івано-Франківська, зручна транспортна
+                                                    розв’язка, великий потік автомобілів. Поблизу зупинка громадського
+                                                    транспорту та річка, у будинку – комерційні приміщення, у дворі –
+                                                    дитячий майданчик, постійний потік людей.<br>
+                                                    Можливість придбати, орендувати чи перепланувати. Обговорюємо
+                                                    індивідуальні побажання клієнта, готові врахувати ваші запити щодо
+                                                    приміщення.
+                                                </p>
+                                                <h5>Якісне будівництво</h5>
+                                                <p>
+                                                    Офісне приміщення знаходиться в заселеному житловому комплексі,
+                                                    збудованому за сучасною монолітно-каркасною технологією будівництва.
+                                                </p>
+                                                <h5>Паркінг</h5>
+                                                <p>
+                                                    Передбачено великий гостьовий паркінг біля будинку.
+                                                </p>
+                                            </div>
+                                            <a href="#" class="btn-clippath orangebg moreobjbtn">
+                                                <span>Менше</span>
+                                                <span>Більше</span>
+                                                <img src="img/general/arr-bottom.svg" alt="btnicon">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="object-item ">
+                                    <img class="object-logo" src="img/object/obj-logo2.svg" alt="logo">
+                                    <div class="object-item__left">
+                                        <h3>
+                                            Оупен спейс у ЖК River Парк
+                                        </h3>
+                                        <ul>
+                                            <li>
+                                                <span class="object-item__icon">
+                                                    <img src="img/object/obj-ic1.svg" alt="icon">
+                                                </span>
+                                                <b>Загальна площа:</b> 550 м2
+                                            </li>
+                                            <li>
+                                                <span class="object-item__icon">
+                                                    <img src="img/object/obj-ic2.svg" alt="icon">
+                                                </span>
+                                                <b>Адреса:</b> вул. Галицька, 141Б,
+                                                м. Івано-Франківськ
+                                            </li>
+                                            <li>
+                                                <span class="object-item__icon">
+                                                    <img src="img/object/obj-ic3.svg" alt="icon">
+                                                </span>
+                                                <b>Поверх:</b> 1
+                                            </li>
+                                            <li>
+                                                <span class="object-item__icon">
+                                                    <img src="img/object/obj-ic4.svg" alt="icon">
+                                                </span>
+                                                <b>Висота приміщення:</b> 3,6 м
+                                            </li>
+                                            <li>
+                                                <span class="object-item__icon">
+                                                    <img src="img/object/obj-ic5.svg" alt="icon">
+                                                </span>
+                                                <b>Зовнішні стіни:</b> цегляні з
+                                                утепленням (пінопласт)
+                                            </li>
+                                            <li>
+                                                <span class="object-item__icon">
+                                                    <img src="img/object/obj-ic6.svg" alt="icon">
+                                                </span>
+                                                <b>Внутрішні стіни:</b> поштукатурені
+                                            </li>
+                                        </ul>
+                                        <a href="#" class="btn-clippath orangebg moreobjbtn">
+                                            <span>Більше</span>
+                                            <img src="img/general/arr-bottom.svg" alt="btnicon">
+                                        </a>
+                                    </div>
+                                    <div class="object-item__right">
+                                        <h3>
+                                            Оупен спейс у ЖК River Парк
+                                        </h3>
+                                        <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+                                            class="swiper objslider2">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide1.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide2.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide1.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide2.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide1.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide2.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide1.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide2.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-button-next v1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="43" height="44"
+                                                    viewBox="0 0 43 44" fill="none">
+                                                    <path
+                                                        d="M10.0005 21.9995L32.9995 21.9995M32.9995 21.9995L21.5 33.4991M32.9995 21.9995L21.5 10.5"
+                                                        stroke="white" stroke-width="3"></path>
+                                                </svg>
+                                            </div>
+                                            <div class="swiper-button-prev v1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="43" height="44"
+                                                    viewBox="0 0 43 44" fill="none">
+                                                    <path
+                                                        d="M32.9995 22.0005L10.0005 22.0005M10.0005 22.0005L21.5 10.5009M10.0005 22.0005L21.5 33.5"
+                                                        stroke="white" stroke-width="3"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div thumbsSlider="" class="swiper objslider1">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide1.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide2.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide1.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide2.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide1.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide2.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide1.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide2.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="objdescrsect">
+                                            <div class="wrp">
+                                                <ul>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic1.svg" alt="icon">
+                                                        </span>
+                                                        <b>Загальна площа:</b> 550 м2
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic7.svg" alt="icon">
+                                                        </span>
+                                                        <b>Підлогове покриття:</b> наливна підлога
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic2.svg" alt="icon">
+                                                        </span>
+                                                        <b>Адреса:</b> вул. Галицька, 141Б,
+                                                        м. Івано-Франківськ
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic8.svg" alt="icon">
+                                                        </span>
+                                                        <b>Вікна:</b> алюмінієві
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic3.svg" alt="icon">
+                                                        </span>
+                                                        <b>Поверх:</b> 1
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic9.svg" alt="icon">
+                                                        </span>
+                                                        <b>Вхідні двері в приміщення:</b> алюмінієві
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic4.svg" alt="icon">
+                                                        </span>
+                                                        <b>Висота приміщення:</b> 3,6 м
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic10.svg" alt="icon">
+                                                        </span>
+                                                        <b>Електропостачання:</b> трифазне, 20 кВт
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic5.svg" alt="icon">
+                                                        </span>
+                                                        <b>Зовнішні стіни:</b> цегляні з
+                                                        утепленням (пінопласт)
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic11.svg" alt="icon">
+                                                        </span>
+                                                        <b>Система водопостачання та каналізації: </b>
+                                                        заведені в приміщення
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic6.svg" alt="icon">
+                                                        </span>
+                                                        <b>Внутрішні стіни:</b> поштукатурені
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic12.svg" alt="icon">
+                                                        </span>
+                                                        <b>Система опалення розведена із
+                                                            встановленими радіаторами:</b> фанкойли
+                                                    </li>
+                                                </ul>
+                                                <h5>Вдале розташування</h5>
+                                                <p>
+                                                    Локація на центральній вулиці Івано-Франківська, зручна транспортна
+                                                    розв’язка, великий потік автомобілів. Поблизу зупинка громадського
+                                                    транспорту та річка, у будинку – комерційні приміщення, у дворі –
+                                                    дитячий майданчик, постійний потік людей.<br>
+                                                    Можливість придбати, орендувати чи перепланувати. Обговорюємо
+                                                    індивідуальні побажання клієнта, готові врахувати ваші запити щодо
+                                                    приміщення.
+                                                </p>
+                                                <h5>Якісне будівництво</h5>
+                                                <p>
+                                                    Офісне приміщення знаходиться в заселеному житловому комплексі,
+                                                    збудованому за сучасною монолітно-каркасною технологією будівництва.
+                                                </p>
+                                                <h5>Паркінг</h5>
+                                                <p>
+                                                    Передбачено великий гостьовий паркінг біля будинку.
+                                                </p>
+                                            </div>
+
+                                            <a href="#" class="btn-clippath orangebg moreobjbtn">
+                                                <span>Менше</span>
+                                                <span>Більше</span>
+                                                <img src="img/general/arr-bottom.svg" alt="btnicon">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="object-item ">
+                                    <img class="object-logo" src="img/object/obj-logo1.svg" alt="logo">
+                                    <div class="object-item__left">
+                                        <h3>
+                                            Оупен спейс у ЖК River Парк
+                                        </h3>
+                                        <p class="object-item__hotprop">
+                                            🔥 Гаряча пропозиція
+                                        </p>
+                                        <ul>
+                                            <li>
+                                                <span class="object-item__icon">
+                                                    <img src="img/object/obj-ic1.svg" alt="icon">
+                                                </span>
+                                                <b>Загальна площа:</b> 550 м2
+                                            </li>
+                                            <li>
+                                                <span class="object-item__icon">
+                                                    <img src="img/object/obj-ic2.svg" alt="icon">
+                                                </span>
+                                                <b>Адреса:</b> вул. Галицька, 141Б,
+                                                м. Івано-Франківськ
+                                            </li>
+                                            <li>
+                                                <span class="object-item__icon">
+                                                    <img src="img/object/obj-ic3.svg" alt="icon">
+                                                </span>
+                                                <b>Поверх:</b> 1
+                                            </li>
+                                            <li>
+                                                <span class="object-item__icon">
+                                                    <img src="img/object/obj-ic4.svg" alt="icon">
+                                                </span>
+                                                <b>Висота приміщення:</b> 3,6 м
+                                            </li>
+                                            <li>
+                                                <span class="object-item__icon">
+                                                    <img src="img/object/obj-ic5.svg" alt="icon">
+                                                </span>
+                                                <b>Зовнішні стіни:</b> цегляні з
+                                                утепленням (пінопласт)
+                                            </li>
+                                            <li>
+                                                <span class="object-item__icon">
+                                                    <img src="img/object/obj-ic6.svg" alt="icon">
+                                                </span>
+                                                <b>Внутрішні стіни:</b> поштукатурені
+                                            </li>
+                                        </ul>
+                                        <a href="#" class="btn-clippath orangebg moreobjbtn">
+                                            <span>Більше</span>
+                                            <img src="img/general/arr-bottom.svg" alt="btnicon">
+                                        </a>
+                                    </div>
+                                    <div class="object-item__right">
+                                        <h3>
+                                            Оупен спейс у ЖК River Парк
+                                        </h3>
+                                        <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+                                            class="swiper objslider2">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide1.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide2.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide1.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide2.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide1.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide2.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide1.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide2.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-button-next v1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="43" height="44"
+                                                    viewBox="0 0 43 44" fill="none">
+                                                    <path
+                                                        d="M10.0005 21.9995L32.9995 21.9995M32.9995 21.9995L21.5 33.4991M32.9995 21.9995L21.5 10.5"
+                                                        stroke="white" stroke-width="3"></path>
+                                                </svg>
+                                            </div>
+                                            <div class="swiper-button-prev v1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="43" height="44"
+                                                    viewBox="0 0 43 44" fill="none">
+                                                    <path
+                                                        d="M32.9995 22.0005L10.0005 22.0005M10.0005 22.0005L21.5 10.5009M10.0005 22.0005L21.5 33.5"
+                                                        stroke="white" stroke-width="3"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div thumbsSlider="" class="swiper objslider1">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide1.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide2.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide1.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide2.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide1.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide2.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide1.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide2.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="objdescrsect">
+                                            <div class="wrp">
+                                                <ul>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic1.svg" alt="icon">
+                                                        </span>
+                                                        <b>Загальна площа:</b> 550 м2
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic7.svg" alt="icon">
+                                                        </span>
+                                                        <b>Підлогове покриття:</b> наливна підлога
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic2.svg" alt="icon">
+                                                        </span>
+                                                        <b>Адреса:</b> вул. Галицька, 141Б,
+                                                        м. Івано-Франківськ
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic8.svg" alt="icon">
+                                                        </span>
+                                                        <b>Вікна:</b> алюмінієві
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic3.svg" alt="icon">
+                                                        </span>
+                                                        <b>Поверх:</b> 1
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic9.svg" alt="icon">
+                                                        </span>
+                                                        <b>Вхідні двері в приміщення:</b> алюмінієві
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic4.svg" alt="icon">
+                                                        </span>
+                                                        <b>Висота приміщення:</b> 3,6 м
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic10.svg" alt="icon">
+                                                        </span>
+                                                        <b>Електропостачання:</b> трифазне, 20 кВт
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic5.svg" alt="icon">
+                                                        </span>
+                                                        <b>Зовнішні стіни:</b> цегляні з
+                                                        утепленням (пінопласт)
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic11.svg" alt="icon">
+                                                        </span>
+                                                        <b>Система водопостачання та каналізації: </b>
+                                                        заведені в приміщення
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic6.svg" alt="icon">
+                                                        </span>
+                                                        <b>Внутрішні стіни:</b> поштукатурені
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic12.svg" alt="icon">
+                                                        </span>
+                                                        <b>Система опалення розведена із
+                                                            встановленими радіаторами:</b> фанкойли
+                                                    </li>
+                                                </ul>
+                                                <h5>Вдале розташування</h5>
+                                                <p>
+                                                    Локація на центральній вулиці Івано-Франківська, зручна транспортна
+                                                    розв’язка, великий потік автомобілів. Поблизу зупинка громадського
+                                                    транспорту та річка, у будинку – комерційні приміщення, у дворі –
+                                                    дитячий майданчик, постійний потік людей.<br>
+                                                    Можливість придбати, орендувати чи перепланувати. Обговорюємо
+                                                    індивідуальні побажання клієнта, готові врахувати ваші запити щодо
+                                                    приміщення.
+                                                </p>
+                                                <h5>Якісне будівництво</h5>
+                                                <p>
+                                                    Офісне приміщення знаходиться в заселеному житловому комплексі,
+                                                    збудованому за сучасною монолітно-каркасною технологією будівництва.
+                                                </p>
+                                                <h5>Паркінг</h5>
+                                                <p>
+                                                    Передбачено великий гостьовий паркінг біля будинку.
+                                                </p>
+                                            </div>
+
+                                            <a href="#" class="btn-clippath orangebg moreobjbtn">
+                                                <span>Менше</span>
+                                                <span>Більше</span>
+                                                <img src="img/general/arr-bottom.svg" alt="btnicon">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bnrwrap">
+                                    <img src="img/object/img.png" alt="img">
+                                </div>
+                                <div class="object-item ">
+                                    <img class="object-logo" src="img/object/obj-logo1.svg" alt="logo">
+                                    <div class="object-item__left">
+                                        <h3>
+                                            Оупен спейс у ЖК River Парк
+                                        </h3>
+                                        <p class="object-item__hotprop">
+                                            🔥 Гаряча пропозиція
+                                        </p>
+                                        <ul>
+                                            <li>
+                                                <span class="object-item__icon">
+                                                    <img src="img/object/obj-ic1.svg" alt="icon">
+                                                </span>
+                                                <b>Загальна площа:</b> 550 м2
+                                            </li>
+                                            <li>
+                                                <span class="object-item__icon">
+                                                    <img src="img/object/obj-ic2.svg" alt="icon">
+                                                </span>
+                                                <b>Адреса:</b> вул. Галицька, 141Б,
+                                                м. Івано-Франківськ
+                                            </li>
+                                            <li>
+                                                <span class="object-item__icon">
+                                                    <img src="img/object/obj-ic3.svg" alt="icon">
+                                                </span>
+                                                <b>Поверх:</b> 1
+                                            </li>
+                                            <li>
+                                                <span class="object-item__icon">
+                                                    <img src="img/object/obj-ic4.svg" alt="icon">
+                                                </span>
+                                                <b>Висота приміщення:</b> 3,6 м
+                                            </li>
+                                            <li>
+                                                <span class="object-item__icon">
+                                                    <img src="img/object/obj-ic5.svg" alt="icon">
+                                                </span>
+                                                <b>Зовнішні стіни:</b> цегляні з
+                                                утепленням (пінопласт)
+                                            </li>
+                                            <li>
+                                                <span class="object-item__icon">
+                                                    <img src="img/object/obj-ic6.svg" alt="icon">
+                                                </span>
+                                                <b>Внутрішні стіни:</b> поштукатурені
+                                            </li>
+                                        </ul>
+                                        <a href="#" class="btn-clippath orangebg moreobjbtn">
+                                            <span>Більше</span>
+                                            <img src="img/general/arr-bottom.svg" alt="btnicon">
+                                        </a>
+                                    </div>
+                                    <div class="object-item__right">
+                                        <h3>
+                                            Оупен спейс у ЖК River Парк
+                                        </h3>
+                                        <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+                                            class="swiper objslider2">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide1.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide2.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide1.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide2.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide1.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide2.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide1.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide2.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-button-next v1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="43" height="44"
+                                                    viewBox="0 0 43 44" fill="none">
+                                                    <path
+                                                        d="M10.0005 21.9995L32.9995 21.9995M32.9995 21.9995L21.5 33.4991M32.9995 21.9995L21.5 10.5"
+                                                        stroke="white" stroke-width="3"></path>
+                                                </svg>
+                                            </div>
+                                            <div class="swiper-button-prev v1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="43" height="44"
+                                                    viewBox="0 0 43 44" fill="none">
+                                                    <path
+                                                        d="M32.9995 22.0005L10.0005 22.0005M10.0005 22.0005L21.5 10.5009M10.0005 22.0005L21.5 33.5"
+                                                        stroke="white" stroke-width="3"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div thumbsSlider="" class="swiper objslider1">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide1.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide2.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide1.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide2.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide1.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide2.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide1.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide2.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="objdescrsect">
+                                            <div class="wrp">
+                                                <ul>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic1.svg" alt="icon">
+                                                        </span>
+                                                        <b>Загальна площа:</b> 550 м2
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic7.svg" alt="icon">
+                                                        </span>
+                                                        <b>Підлогове покриття:</b> наливна підлога
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic2.svg" alt="icon">
+                                                        </span>
+                                                        <b>Адреса:</b> вул. Галицька, 141Б,
+                                                        м. Івано-Франківськ
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic8.svg" alt="icon">
+                                                        </span>
+                                                        <b>Вікна:</b> алюмінієві
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic3.svg" alt="icon">
+                                                        </span>
+                                                        <b>Поверх:</b> 1
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic9.svg" alt="icon">
+                                                        </span>
+                                                        <b>Вхідні двері в приміщення:</b> алюмінієві
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic4.svg" alt="icon">
+                                                        </span>
+                                                        <b>Висота приміщення:</b> 3,6 м
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic10.svg" alt="icon">
+                                                        </span>
+                                                        <b>Електропостачання:</b> трифазне, 20 кВт
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic5.svg" alt="icon">
+                                                        </span>
+                                                        <b>Зовнішні стіни:</b> цегляні з
+                                                        утепленням (пінопласт)
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic11.svg" alt="icon">
+                                                        </span>
+                                                        <b>Система водопостачання та каналізації: </b>
+                                                        заведені в приміщення
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic6.svg" alt="icon">
+                                                        </span>
+                                                        <b>Внутрішні стіни:</b> поштукатурені
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic12.svg" alt="icon">
+                                                        </span>
+                                                        <b>Система опалення розведена із
+                                                            встановленими радіаторами:</b> фанкойли
+                                                    </li>
+                                                </ul>
+                                                <h5>Вдале розташування</h5>
+                                                <p>
+                                                    Локація на центральній вулиці Івано-Франківська, зручна транспортна
+                                                    розв’язка, великий потік автомобілів. Поблизу зупинка громадського
+                                                    транспорту та річка, у будинку – комерційні приміщення, у дворі –
+                                                    дитячий майданчик, постійний потік людей.<br>
+                                                    Можливість придбати, орендувати чи перепланувати. Обговорюємо
+                                                    індивідуальні побажання клієнта, готові врахувати ваші запити щодо
+                                                    приміщення.
+                                                </p>
+                                                <h5>Якісне будівництво</h5>
+                                                <p>
+                                                    Офісне приміщення знаходиться в заселеному житловому комплексі,
+                                                    збудованому за сучасною монолітно-каркасною технологією будівництва.
+                                                </p>
+                                                <h5>Паркінг</h5>
+                                                <p>
+                                                    Передбачено великий гостьовий паркінг біля будинку.
+                                                </p>
+                                            </div>
+
+                                            <a href="#" class="btn-clippath orangebg moreobjbtn">
+                                                <span>Менше</span>
+                                                <span>Більше</span>
+                                                <img src="img/general/arr-bottom.svg" alt="btnicon">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="object-item ">
+                                    <img class="object-logo" src="img/object/obj-logo2.svg" alt="logo">
+                                    <div class="object-item__left">
+                                        <h3>
+                                            Оупен спейс у ЖК River Парк
+                                        </h3>
+                                        <ul>
+                                            <li>
+                                                <span class="object-item__icon">
+                                                    <img src="img/object/obj-ic1.svg" alt="icon">
+                                                </span>
+                                                <b>Загальна площа:</b> 550 м2
+                                            </li>
+                                            <li>
+                                                <span class="object-item__icon">
+                                                    <img src="img/object/obj-ic2.svg" alt="icon">
+                                                </span>
+                                                <b>Адреса:</b> вул. Галицька, 141Б,
+                                                м. Івано-Франківськ
+                                            </li>
+                                            <li>
+                                                <span class="object-item__icon">
+                                                    <img src="img/object/obj-ic3.svg" alt="icon">
+                                                </span>
+                                                <b>Поверх:</b> 1
+                                            </li>
+                                            <li>
+                                                <span class="object-item__icon">
+                                                    <img src="img/object/obj-ic4.svg" alt="icon">
+                                                </span>
+                                                <b>Висота приміщення:</b> 3,6 м
+                                            </li>
+                                            <li>
+                                                <span class="object-item__icon">
+                                                    <img src="img/object/obj-ic5.svg" alt="icon">
+                                                </span>
+                                                <b>Зовнішні стіни:</b> цегляні з
+                                                утепленням (пінопласт)
+                                            </li>
+                                            <li>
+                                                <span class="object-item__icon">
+                                                    <img src="img/object/obj-ic6.svg" alt="icon">
+                                                </span>
+                                                <b>Внутрішні стіни:</b> поштукатурені
+                                            </li>
+                                        </ul>
+                                        <a href="#" class="btn-clippath orangebg moreobjbtn">
+                                            <span>Більше</span>
+                                            <img src="img/general/arr-bottom.svg" alt="btnicon">
+                                        </a>
+                                    </div>
+                                    <div class="object-item__right">
+                                        <h3>
+                                            Оупен спейс у ЖК River Парк
+                                        </h3>
+                                        <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+                                            class="swiper objslider2">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide1.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide2.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide1.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide2.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide1.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide2.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide1.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide2.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-button-next v1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="43" height="44"
+                                                    viewBox="0 0 43 44" fill="none">
+                                                    <path
+                                                        d="M10.0005 21.9995L32.9995 21.9995M32.9995 21.9995L21.5 33.4991M32.9995 21.9995L21.5 10.5"
+                                                        stroke="white" stroke-width="3"></path>
+                                                </svg>
+                                            </div>
+                                            <div class="swiper-button-prev v1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="43" height="44"
+                                                    viewBox="0 0 43 44" fill="none">
+                                                    <path
+                                                        d="M32.9995 22.0005L10.0005 22.0005M10.0005 22.0005L21.5 10.5009M10.0005 22.0005L21.5 33.5"
+                                                        stroke="white" stroke-width="3"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div thumbsSlider="" class="swiper objslider1">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide1.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide2.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide1.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide2.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide1.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide2.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide1.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide2.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="objdescrsect">
+                                            <div class="wrp">
+                                                <ul>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic1.svg" alt="icon">
+                                                        </span>
+                                                        <b>Загальна площа:</b> 550 м2
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic7.svg" alt="icon">
+                                                        </span>
+                                                        <b>Підлогове покриття:</b> наливна підлога
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic2.svg" alt="icon">
+                                                        </span>
+                                                        <b>Адреса:</b> вул. Галицька, 141Б,
+                                                        м. Івано-Франківськ
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic8.svg" alt="icon">
+                                                        </span>
+                                                        <b>Вікна:</b> алюмінієві
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic3.svg" alt="icon">
+                                                        </span>
+                                                        <b>Поверх:</b> 1
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic9.svg" alt="icon">
+                                                        </span>
+                                                        <b>Вхідні двері в приміщення:</b> алюмінієві
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic4.svg" alt="icon">
+                                                        </span>
+                                                        <b>Висота приміщення:</b> 3,6 м
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic10.svg" alt="icon">
+                                                        </span>
+                                                        <b>Електропостачання:</b> трифазне, 20 кВт
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic5.svg" alt="icon">
+                                                        </span>
+                                                        <b>Зовнішні стіни:</b> цегляні з
+                                                        утепленням (пінопласт)
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic11.svg" alt="icon">
+                                                        </span>
+                                                        <b>Система водопостачання та каналізації: </b>
+                                                        заведені в приміщення
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic6.svg" alt="icon">
+                                                        </span>
+                                                        <b>Внутрішні стіни:</b> поштукатурені
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic12.svg" alt="icon">
+                                                        </span>
+                                                        <b>Система опалення розведена із
+                                                            встановленими радіаторами:</b> фанкойли
+                                                    </li>
+                                                </ul>
+                                                <h5>Вдале розташування</h5>
+                                                <p>
+                                                    Локація на центральній вулиці Івано-Франківська, зручна транспортна
+                                                    розв’язка, великий потік автомобілів. Поблизу зупинка громадського
+                                                    транспорту та річка, у будинку – комерційні приміщення, у дворі –
+                                                    дитячий майданчик, постійний потік людей.<br>
+                                                    Можливість придбати, орендувати чи перепланувати. Обговорюємо
+                                                    індивідуальні побажання клієнта, готові врахувати ваші запити щодо
+                                                    приміщення.
+                                                </p>
+                                                <h5>Якісне будівництво</h5>
+                                                <p>
+                                                    Офісне приміщення знаходиться в заселеному житловому комплексі,
+                                                    збудованому за сучасною монолітно-каркасною технологією будівництва.
+                                                </p>
+                                                <h5>Паркінг</h5>
+                                                <p>
+                                                    Передбачено великий гостьовий паркінг біля будинку.
+                                                </p>
+                                            </div>
+
+                                            <a href="#" class="btn-clippath orangebg moreobjbtn">
+                                                <span>Менше</span>
+                                                <span>Більше</span>
+                                                <img src="img/general/arr-bottom.svg" alt="btnicon">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="object-item ">
+                                    <img class="object-logo" src="img/object/obj-logo1.svg" alt="logo">
+                                    <div class="object-item__left">
+                                        <h3>
+                                            Оупен спейс у ЖК River Парк
+                                        </h3>
+                                        <p class="object-item__hotprop">
+                                            🔥 Гаряча пропозиція
+                                        </p>
+                                        <ul>
+                                            <li>
+                                                <span class="object-item__icon">
+                                                    <img src="img/object/obj-ic1.svg" alt="icon">
+                                                </span>
+                                                <b>Загальна площа:</b> 550 м2
+                                            </li>
+                                            <li>
+                                                <span class="object-item__icon">
+                                                    <img src="img/object/obj-ic2.svg" alt="icon">
+                                                </span>
+                                                <b>Адреса:</b> вул. Галицька, 141Б,
+                                                м. Івано-Франківськ
+                                            </li>
+                                            <li>
+                                                <span class="object-item__icon">
+                                                    <img src="img/object/obj-ic3.svg" alt="icon">
+                                                </span>
+                                                <b>Поверх:</b> 1
+                                            </li>
+                                            <li>
+                                                <span class="object-item__icon">
+                                                    <img src="img/object/obj-ic4.svg" alt="icon">
+                                                </span>
+                                                <b>Висота приміщення:</b> 3,6 м
+                                            </li>
+                                            <li>
+                                                <span class="object-item__icon">
+                                                    <img src="img/object/obj-ic5.svg" alt="icon">
+                                                </span>
+                                                <b>Зовнішні стіни:</b> цегляні з
+                                                утепленням (пінопласт)
+                                            </li>
+                                            <li>
+                                                <span class="object-item__icon">
+                                                    <img src="img/object/obj-ic6.svg" alt="icon">
+                                                </span>
+                                                <b>Внутрішні стіни:</b> поштукатурені
+                                            </li>
+                                        </ul>
+                                        <a href="#" class="btn-clippath orangebg moreobjbtn">
+                                            <span>Більше</span>
+                                            <img src="img/general/arr-bottom.svg" alt="btnicon">
+                                        </a>
+                                    </div>
+                                    <div class="object-item__right">
+                                        <h3>
+                                            Оупен спейс у ЖК River Парк
+                                        </h3>
+                                        <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+                                            class="swiper objslider2">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide1.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide2.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide1.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide2.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide1.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide2.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide1.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide2.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-button-next v1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="43" height="44"
+                                                    viewBox="0 0 43 44" fill="none">
+                                                    <path
+                                                        d="M10.0005 21.9995L32.9995 21.9995M32.9995 21.9995L21.5 33.4991M32.9995 21.9995L21.5 10.5"
+                                                        stroke="white" stroke-width="3"></path>
+                                                </svg>
+                                            </div>
+                                            <div class="swiper-button-prev v1">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="43" height="44"
+                                                    viewBox="0 0 43 44" fill="none">
+                                                    <path
+                                                        d="M32.9995 22.0005L10.0005 22.0005M10.0005 22.0005L21.5 10.5009M10.0005 22.0005L21.5 33.5"
+                                                        stroke="white" stroke-width="3"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div thumbsSlider="" class="swiper objslider1">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide1.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide2.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide1.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide2.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide1.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide2.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide1.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="imgwrap">
+                                                        <img src="img/object/slide2.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="objdescrsect">
+                                            <div class="wrp">
+                                                <ul>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic1.svg" alt="icon">
+                                                        </span>
+                                                        <b>Загальна площа:</b> 550 м2
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic7.svg" alt="icon">
+                                                        </span>
+                                                        <b>Підлогове покриття:</b> наливна підлога
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic2.svg" alt="icon">
+                                                        </span>
+                                                        <b>Адреса:</b> вул. Галицька, 141Б,
+                                                        м. Івано-Франківськ
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic8.svg" alt="icon">
+                                                        </span>
+                                                        <b>Вікна:</b> алюмінієві
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic3.svg" alt="icon">
+                                                        </span>
+                                                        <b>Поверх:</b> 1
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic9.svg" alt="icon">
+                                                        </span>
+                                                        <b>Вхідні двері в приміщення:</b> алюмінієві
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic4.svg" alt="icon">
+                                                        </span>
+                                                        <b>Висота приміщення:</b> 3,6 м
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic10.svg" alt="icon">
+                                                        </span>
+                                                        <b>Електропостачання:</b> трифазне, 20 кВт
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic5.svg" alt="icon">
+                                                        </span>
+                                                        <b>Зовнішні стіни:</b> цегляні з
+                                                        утепленням (пінопласт)
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic11.svg" alt="icon">
+                                                        </span>
+                                                        <b>Система водопостачання та каналізації: </b>
+                                                        заведені в приміщення
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic6.svg" alt="icon">
+                                                        </span>
+                                                        <b>Внутрішні стіни:</b> поштукатурені
+                                                    </li>
+                                                    <li>
+                                                        <span class="object-item__icon">
+                                                            <img src="img/object/obj-ic12.svg" alt="icon">
+                                                        </span>
+                                                        <b>Система опалення розведена із
+                                                            встановленими радіаторами:</b> фанкойли
+                                                    </li>
+                                                </ul>
+                                                <h5>Вдале розташування</h5>
+                                                <p>
+                                                    Локація на центральній вулиці Івано-Франківська, зручна транспортна
+                                                    розв’язка, великий потік автомобілів. Поблизу зупинка громадського
+                                                    транспорту та річка, у будинку – комерційні приміщення, у дворі –
+                                                    дитячий майданчик, постійний потік людей.<br>
+                                                    Можливість придбати, орендувати чи перепланувати. Обговорюємо
+                                                    індивідуальні побажання клієнта, готові врахувати ваші запити щодо
+                                                    приміщення.
+                                                </p>
+                                                <h5>Якісне будівництво</h5>
+                                                <p>
+                                                    Офісне приміщення знаходиться в заселеному житловому комплексі,
+                                                    збудованому за сучасною монолітно-каркасною технологією будівництва.
+                                                </p>
+                                                <h5>Паркінг</h5>
+                                                <p>
+                                                    Передбачено великий гостьовий паркінг біля будинку.
+                                                </p>
+                                            </div>
+
+                                            <a href="#" class="btn-clippath orangebg moreobjbtn">
+                                                <span>Менше</span>
+                                                <span>Більше</span>
+                                                <img src="img/general/arr-bottom.svg" alt="btnicon">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="text-center">
+                                <a href="#" class="moreobjbott">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                        fill="none">
+                                        <path
+                                            d="M7.36109 0.638436L7.36109 12.3616M7.36109 12.3616L1.49953 6.5M7.36109 12.3616L13.2227 6.5"
+                                            stroke="#FFA047" stroke-width="2" />
+                                    </svg>
+                                    Показати більше обʼєктів
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-4">
+                        <div class="footer__leftsect">
+                            <a href="#" class="footer__logo">
+                                <img src="img/general/logo-footer.svg" alt="logo">
+                            </a>
+                            <div class="footer__subscribe">
+                                <form action="#">
+                                    <input type="text" placeholder="Email">
+                                    <button type="submit">
+                                        <img src="img/general/footer-arr.svg" alt="arrow">
+                                    </button>
+                                </form>
+                            </div>
+                            <ul class="footer__social">
+                                <li><a href="#"><img src="img/general/fb.svg" alt="facebook"></a></li>
+                                <li><a href="#"><img src="img/general/inst.svg" alt="instagram"></a></li>
+                                <li><a href="#"><img src="img/general/ytube.svg" alt="youtube"></a></li>
+                                <li><a href="#"><img src="img/general/tik.svg" alt="tiktok"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
+                        <div class="footer__nav">
+                            <p class="footer__title">Navigation</p>
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Office Rooms</a></li>
+                                <li><a href="#">Company</a></li>
+                                <li><a href="#">News</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
+                        <div class="footer__contacts">
+                            <p class="footer__title">Contact Us</p>
+                            <div class="footer__local">
+                                <img src="img/general/location.svg" alt="location">
+                                <p class="subtitle">Address</p>
+                                <a href="#">
+                                    Ukraine, Ivano-Frankivsk,
+                                    Yevhen Konovalets st., 229
+                                </a>
+                            </div>
+                            <div class="footer__tel">
+                                <img src="img/general/telephone.svg" alt="tel">
+                                <p class="subtitle">Phone Number</p>
+                                <a href="tel:+380687070300">
+                                    +38 068 707 03 00
+                                </a>
+                                <a href="tel:+380687070300">
+                                    +1 514 442 4477
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <div class="container">
+                    <p>
+                        © 2024 <b>ARKAN</b> All Rights Reserved and Exclusive Rights.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+
+
+
+
+
+
+
+
+
+
+<script src="js/lib/jquery.js"></script>
+<script src="js/lib/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="js/main.js"></script>
+
+</html>

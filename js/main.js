@@ -33,8 +33,11 @@ $(document).ready(function () {
     });
 
     // parallax
-    var scene = document.getElementById('scene');
-    var parallaxInstance = new Parallax(scene);
+
+    if ($('#scene').length > 0) {
+        var scene = document.getElementById('scene');
+        var parallaxInstance = new Parallax(scene);
+    }
 
     // partners slider
 
@@ -136,7 +139,8 @@ $(document).ready(function () {
         navigation: {
             nextEl: ".swiper-button-next.v3",
             prevEl: ".swiper-button-prev.v3",
-        },
+        }
+
     });
 
     var mainSwiper = new Swiper(".hotprormainsl", {
@@ -155,6 +159,7 @@ $(document).ready(function () {
         //     el: ".swiper-pagination.v3",
         //     clickable: true,
         // },
+
     });
 
     // faq
@@ -186,13 +191,123 @@ $(document).ready(function () {
         window.scrollTo(0, 0);
     })
 
-    let modal = document.getElementById("videomodal"); // Замініть на ID вашого модального вікна
-    let iframe = modal.querySelector("iframe");
+    if ($('#videomodal').length > 0) {
+        let modal = document.getElementById("videomodal"); // Замініть на ID вашого модального вікна
+        let iframe = modal.querySelector("iframe");
 
-    modal.addEventListener("hidden.bs.modal", function () {
-        let src = iframe.src;
-        iframe.src = "";  // Очистка src, щоб відео зупинилося
-        iframe.src = src; // Відновлення src
+        modal.addEventListener("hidden.bs.modal", function () {
+            let src = iframe.src;
+            iframe.src = "";  // Очистка src, щоб відео зупинилося
+            iframe.src = src; // Відновлення src
+        });
+    }
+
+
+
+    $('.filtermore').click(function (e) {
+        e.preventDefault();
+        $(this).parent('.filterbox').toggleClass('open');
+        $(this).find('span').toggle();
     });
+
+
+    // object sliders
+    // var swiper = new Swiper(".objslider1", {
+    //     loop: true,
+    //     spaceBetween: 10,
+    //     slidesPerView: 6,
+    //     freeMode: true,
+    //     watchSlidesProgress: true,
+    // });
+    // var swiper2 = new Swiper(".objslider2", {
+    //     loop: true,
+    //     spaceBetween: 10,
+    //     navigation: {
+    //         nextEl: ".swiper-button-next",
+    //         prevEl: ".swiper-button-prev",
+    //     },
+    //     thumbs: {
+    //         swiper: swiper,
+    //     },
+    // });
+
+    $(".objslider2").each(function (index) {
+        let $this = $(this);
+        let $parent = $this.closest('.object-item__right'); // Знаходимо батьківський контейнер, якщо він є
+        let thumbSlider = new Swiper($parent.find(".objslider1")[0], {
+            loop: true,
+            spaceBetween: 10,
+            slidesPerView: 6,
+            freeMode: true,
+            watchSlidesProgress: true,
+            breakpoints: {
+                320: {
+                    slidesPerView: 3,
+                },
+                576: {
+                    slidesPerView: 4,
+                },
+                767: {
+                    slidesPerView: 6,
+                },
+            },
+        });
+
+        new Swiper(this, {
+            loop: true,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: $parent.find(".swiper-button-next")[0],
+                prevEl: $parent.find(".swiper-button-prev")[0],
+            },
+            thumbs: {
+                swiper: thumbSlider,
+            },
+        });
+    });
+
+
+    $('.moreobjbtn').click(function (e) {
+        e.preventDefault();
+        $(this).parents('.object-item').toggleClass('open');
+    })
+
+
+    $('.filterbtn').click(function () {
+        $('.outobj__filter').toggle();
+    })
+
+
+    // map
+
+    var map = L.map('map').setView([48.9226, 24.7111], 14);
+
+    // Додавання Positron карти від Carto
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/">CARTO</a>',
+        subdomains: 'abcd',
+        maxZoom: 20
+    }).addTo(map);
+
+    var markers = [
+        { coords: [48.9226, 24.7103], text: "Площа Ринок", icon: 'img/object/mapmarker1.svg' },
+        { coords: [48.9233, 24.7235], text: "Міське озеро", icon: 'img/object/mapmarker1.svg' },
+        { coords: [48.9167, 24.7039], text: "Залізничний вокзал", icon: 'img/object/mapmarker2.svg' },
+        { coords: [48.9194, 24.7118], text: "Фортечна галерея 'Бастіон'", icon: 'img/object/mapmarker2.svg' }
+    ];
+
+    // Додавання маркерів з унікальними іконками
+    markers.forEach(marker => {
+        let customIcon = L.icon({
+            iconUrl: marker.icon,   // Унікальна іконка для кожного маркера
+            iconSize: [40, 40],     // Розмір іконки
+            iconAnchor: [20, 40],   // Точка прив’язки (центр внизу)
+            popupAnchor: [0, -40]   // Зсув попапу
+        });
+
+        L.marker(marker.coords, { icon: customIcon }).addTo(map)
+            .bindPopup(marker.text);
+    });
+
 
 });
