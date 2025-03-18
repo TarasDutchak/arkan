@@ -500,13 +500,13 @@
 }
 
 #map {
-    height: 556px;
+    height: 100%;
     width: 100%;
     z-index: 2;
 }
 
 .objectmap {
-    padding-top: 107px;
+    // padding-top: 107px;
 }
 
 @media(max-width:1599.8px) {
