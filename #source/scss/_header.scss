@@ -384,7 +384,13 @@ header.header {
         z-index: 19;
     }
 
-
+    header.header {
+        &.header__white {
+            ul li a {
+                color: #fff;
+            }
+        }
+    }
 
 
 

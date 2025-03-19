@@ -31,9 +31,27 @@ article {
     padding: 80px 0 60px;
     background: #F5F5F5;
 
-
-
-
+    h2 {
+        color: #000;
+        line-height: 140%;
+        margin-bottom: 15px;
+        font-weight: 600;
+        font-size: 32px;
+    }
+    h3 {
+        color: #000;
+        line-height: 140%;
+        margin-bottom: 15px;
+        font-weight: 600;
+        font-size: 24px;
+    }
+    h4 {
+        color: #000;
+        line-height: 140%;
+        margin-bottom: 15px;
+        font-weight: 600;
+        font-size: 22px;
+    }
     h5 {
         font-size: 20px;
         color: #000;
@@ -104,6 +122,7 @@ article {
                     height: calc(50% - 8px);
                     position: relative;
                     overflow: hidden;
+                    height: 232px;
 
                     img {
                         width: 100%;
@@ -220,7 +239,7 @@ article {
             object-position: 50% 50%;
             transition: 0.5s;
             transform: scale(1.05);
-            
+
         }
     }
 
@@ -266,5 +285,189 @@ article {
                 color: #02244A;
             }
         }
+    }
+}
+
+@media(max-width:1599.8px) {
+    .article-heroscreen {
+        height: 600px;
+    }
+
+    .article-heroscreen .date {
+        line-height: 140%;
+    }
+}
+
+@media(max-width:1399.8px) {
+    .article-heroscreen {
+        .container {
+            margin-top: 50px;
+        }
+    }
+}
+
+@media(max-width:1199.8px) {
+    .article-heroscreen h1 {
+        font-size: 42px;
+        line-height: 140%;
+    }
+
+    .article-heroscreen .date {
+        font-size: 16px;
+    }
+
+    .article-heroscreen {
+        height: 500px;
+    }
+
+    .article-readmore h3 {
+        font-size: 42px;
+        margin-bottom: 30px;
+    }
+
+    .rmpoct-item .imgwrap {
+        height: 200px;
+        margin-bottom: 15px;
+    }
+
+    .rmpoct-item {
+        padding: 15px 15px 25px 15px;
+        min-height: initial;
+        height: 100%;
+    }
+}
+
+@media(max-width:991.8px) {
+    .article-heroscreen {
+        height: 400px;
+        padding-top: 80px;
+    }
+
+    .article-heroscreen h1 {
+        font-size: 36px;
+    }
+
+    .article-heroscreen .container {
+        margin-top: 0;
+    }
+
+    article {
+        padding: 60px 0;
+    }
+
+    article .leftpic-item .imgswrap,
+    article .leftpic-item .descrwrap {
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+
+    article .leftpic-item .imgswrap {
+        margin-bottom: 25px;
+    }
+
+    article .leftpic-item .descrwrap {
+        padding-left: 0;
+    }
+
+    article br {
+        display: none;
+    }
+
+    article .leftsolopic .leftsolopic__img {
+        max-width: 100%;
+        flex: 0 0 100%;
+        margin-bottom: 25px;
+        display: none;
+    }
+
+    article .leftsolopic .leftsolopic__descr {
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+
+    article .article-imgsection .article-imgsection__left {
+        height: 400px;
+    }
+
+    article .article-imgsection .article-imgsection__right .imgwrap {
+        height: 190px;
+    }
+
+    .article-readmore .col-lg-4 {
+        margin-bottom: 30px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+
+
+
+    article .leftpic-item {
+        margin: 30px 0 50px;
+    }
+
+    article .leftsolopic,
+    article .article-imgsection {
+        margin-bottom: 50px;
+    }
+}
+
+@media(max-width:767.8px) {
+
+    .article-heroscreen h1 br {
+        display: none;
+    }
+
+    .article-heroscreen h1 {
+        font-size: 28px;
+    }
+
+    article .leftpic-item .imgswrap .imgbig {
+        height: 400px;
+    }
+
+    article .leftpic-item .imgswrap .imgssmall .imgsmall {
+        height: calc(50% - 8px);
+    }
+}
+
+@media(max-width:575.8px) {
+    .article-heroscreen .date {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .article-heroscreen h1 {
+        font-size: 24px;
+    }
+
+    .article-heroscreen {
+        min-height: 300px;
+        height: auto;
+        padding-top: 70px;
+    }
+
+    article {
+        padding: 40px 0;
+    }
+
+    article .leftpic-item .imgswrap .imgbig,
+    article .article-imgsection .article-imgsection__left {
+        height: 300px;
+    }
+
+    article .article-imgsection .article-imgsection__right .imgwrap {
+        height: calc(50% - 8px);
+    }
+
+    .article-readmore h3 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .rmpoct-item .description h5 {
+        font-size: 18px;
     }
 }
