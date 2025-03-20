@@ -310,4 +310,33 @@ $(document).ready(function () {
         });
     }
 
+    if ($('#map1').length > 0) {
+        var map = L.map('map1', { zoomControl: false }).setView([48.9226, 24.7111], 14);
+    
+        // Додавання Positron карти від Carto
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/">CARTO</a>',
+            subdomains: 'abcd',
+            maxZoom: 20
+        }).addTo(map);
+    
+        var markers = [
+            { coords: [48.9194, 24.7118], text: "Фортечна галерея 'Бастіон'", icon: 'img/object/mapmarker2.svg' }
+        ];
+    
+        // Додавання маркерів з унікальними іконками
+        markers.forEach(marker => {
+            let customIcon = L.icon({
+                iconUrl: marker.icon,   // Унікальна іконка для кожного маркера
+                iconSize: [40, 40],     // Розмір іконки
+                iconAnchor: [20, 40],   // Точка прив’язки (центр внизу)
+                popupAnchor: [0, -40]   // Зсув попапу
+            });
+    
+            L.marker(marker.coords, { icon: customIcon }).addTo(map)
+                .bindPopup(marker.text);
+        });
+    }
+    
+
 });
