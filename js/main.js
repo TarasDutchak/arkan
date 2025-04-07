@@ -347,4 +347,10 @@ $(document).ready(function () {
     }
     
 
+    $('.telinput').inputmask({
+        "mask": "+ 389999999999",
+        showMaskOnHover: false,
+        showMaskOnFocus: false,
+    });
+
 });
