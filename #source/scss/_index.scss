@@ -232,10 +232,10 @@
         }
 
         p {
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 600;
             color: #353B44;
-            margin-bottom: 22px;
+            margin-bottom: 6px;
             line-height: 140%;
             display: -webkit-box;
             -webkit-line-clamp: 2;
@@ -2126,9 +2126,13 @@
         z-index: 4;
     }
 
+    .infoslide__content .infoslide__descrwrap p {
+        margin-bottom: 4px;
+    }
 
-
-
+    .infoslide__content .infoslide__descrwrap {
+        padding: 10px 30px;
+    }
 
 
 
@@ -2438,6 +2442,9 @@
         max-width: 800px;
     }
 
+    .infoslide__content, .infoslider .infoslide {
+        height: 260px;
+    }
 
 
     .infoslider .infoslide {

@@ -19,7 +19,7 @@
 			breakpoints: {
 				320: {
 					spaceBetween: 10,
-					slidesOffsetBefore: 0,
+					slidesOffsetBefore: 20,
 					initialSlide: 1,
 				},
 				576: {
