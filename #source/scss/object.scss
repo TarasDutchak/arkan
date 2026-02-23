@@ -495,9 +495,7 @@
     }
 }
 
-.filterbtn {
-    display: none;
-}
+
 
 #map {
     height: 100%;
@@ -719,6 +717,30 @@
     }
 }
 
+.filterbtn__wrapper {
+    display: none;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+
+    .filterbtn {
+        margin-bottom: 0;
+        width: 100%;
+        max-width: 50px;
+        flex: 0 0 50px;
+    }
+
+    p {
+        width: 100%;
+        max-width: calc(100% - 50px);
+        flex: 0 0 calc(100% - 50px);
+        margin: 0;
+        padding-left: 15px;
+        font-size: 21px;
+        font-weight: 700;
+    }
+}
+
 
 // 22.02 end
 
@@ -812,6 +834,10 @@
         img {
             width: 32px;
         }
+    }
+
+    .filterbtn__wrapper {
+        display: flex;
     }
 
     .outobj__filter {
