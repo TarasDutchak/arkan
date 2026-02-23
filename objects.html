@@ -228,10 +228,19 @@
                                                 <b>Внутрішні стіни:</b> поштукатурені
                                             </li>
                                         </ul>
-                                        <a href="#" class="btn-clippath orangebg moreobjbtn">
-                                            <span>Більше</span>
-                                            <img src="img/general/arr-bottom.svg" alt="btnicon">
-                                        </a>
+                                        <!-- 22.02 -->
+                                        <div class="itembtns">
+                                            <a href="#" class="btn-clippath orangebg" data-bs-toggle="modal"
+                                                data-bs-target="#objectmodal">
+                                                <span>Повідомити про доступність</span>
+                                                <img src="img/general/arr-bottom.svg" alt="btnicon">
+                                            </a>
+                                            <a href="#"
+                                                class="btn-clippath orangebg moreobjbtn moreobjbtn__sm disabled">
+                                                <img src="img/general/arr-bottom.svg" alt="btnicon">
+                                            </a>
+                                        </div>
+                                        <!-- 22.02 end-->
                                     </div>
                                     <div class="object-item__right">
                                         <h3>
@@ -239,6 +248,13 @@
                                         </h3>
                                         <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
                                             class="swiper objslider2">
+
+                                            <!-- 22.02 -->
+                                            <span class="btn-clippath orangebg zdano">
+                                                <span>Здано</span>
+                                            </span>
+                                            <!-- 22.02 end-->
+
                                             <div class="swiper-wrapper">
                                                 <div class="swiper-slide">
                                                     <div class="imgwrap">
@@ -442,11 +458,19 @@
                                                     Передбачено великий гостьовий паркінг біля будинку.
                                                 </p>
                                             </div>
-                                            <a href="#" class="btn-clippath orangebg moreobjbtn">
-                                                <span>Менше</span>
-                                                <span>Більше</span>
-                                                <img src="img/general/arr-bottom.svg" alt="btnicon">
-                                            </a>
+                                            <!-- 22.02 -->
+                                            <div class="itembtns showmobile">
+                                                <a href="#" class="btn-clippath orangebg" data-bs-toggle="modal"
+                                                    data-bs-target="#objectmodal">
+                                                    <span>Повідомити про доступність</span>
+                                                    <img src="img/general/arr-bottom.svg" alt="btnicon">
+                                                </a>
+                                                <a href="#"
+                                                    class="btn-clippath orangebg moreobjbtn moreobjbtn__sm disabled">
+                                                    <img src="img/general/arr-bottom.svg" alt="btnicon">
+                                                </a>
+                                            </div>
+                                            <!-- 22.02 end -->
                                         </div>
                                     </div>
                                 </div>
@@ -1927,6 +1951,40 @@
         </div>
 
     </footer>
+
+
+    <div class="modal fade report-availability" id="objectmodal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <button type="button" class="closemodal" data-bs-dismiss="modal" aria-label="Close">
+                    <img src="img/general/close.svg" alt="close">
+                </button>
+                <div class="report__header">
+                    <p class="title">Повідомити про наявність</p>
+                    <p>
+                        Ми вам зв'яжемося з вами одразу як об'єкти з'явиться
+                    </p>
+                </div>
+                <form action="#">
+                    <div class="inpfields">
+                        <div class="inpfield">
+                            <label for="namer">Імʼя <span>*</span></label>
+                            <input type="text" placeholder="Імʼя" id="namer">
+                        </div>
+                        <div class="inpfield">
+                            <label for="numr">Номер телефону <span>*</span></label>
+                            <input type="text" placeholder="Номер телефону" class="telinput" inputmode="text" id="numr">
+                        </div>
+                        <input type="submit" value="Повідомити" class="btn-clippath orangebg">
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+
 
 </body>
 
